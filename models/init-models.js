@@ -254,6 +254,9 @@ export const Producto = sequelize.define('Producto', {
   fecharegistro: {
     type: DataTypes.DATE,
   },
+  esactivo: {
+    type : DataTypes.BOOLEAN,
+  }
 }, {
   tableName: 'productos', // Nombre de la tabla real
   timestamps: false, // Si no necesitas los campos createdAt y updatedAt

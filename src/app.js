@@ -4,7 +4,8 @@ import express from "express";
 import morgan from "morgan";
 import authRoutes from './Routes/auth.routes.js'
 import dashboard from './Routes/dashboard.routes.js'
-import prodcutos from './Routes/producto.routes.js'
+import productos from './Routes/producto.routes.js'
+import detalleVenta from './Routes/detventa.routes.js'
 import cookieParser from "cookie-parser";
 
 // import { pool } from "./db.js";
@@ -24,5 +25,6 @@ app.use(express.json())
 app.use(cookieParser())
 //hacer que en las rutas a usar precedan de un prefijo
 app.use("/api",authRoutes);
-app.use("/api", prodcutos);
+app.use("/api", productos);
+app.use("/api", detalleVenta)
 export default app;
